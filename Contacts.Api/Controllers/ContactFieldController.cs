@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 
 namespace Contacts.Api.Controllers
 {
+    [ApiController]
+    [Route("[controller]")]
     public class ContactFieldController : ControllerBase
     {
         readonly IContactFieldQuery _contactFieldQuery;
