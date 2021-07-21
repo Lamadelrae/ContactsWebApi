@@ -12,5 +12,7 @@ namespace Contacts.Services.Queries.Contacts.Interfaces
         public ContactFieldDto Get(Guid id);
 
         public IEnumerable<ContactFieldDto> Get();
+
+        public IEnumerable<ContactFieldDto> GetByContactId(Guid id);
     }
 }

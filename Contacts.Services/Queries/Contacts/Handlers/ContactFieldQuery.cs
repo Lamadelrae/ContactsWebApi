@@ -35,5 +35,16 @@ namespace Contacts.Services.Queries.Contacts.Handlers
                     Value = i.Value
                 });
         }
+
+
+        public IEnumerable<ContactFieldDto> GetByContactId(Guid id)
+        {
+            return _contactFieldRepository.GetFieldsByContactId(id)
+                .Select(i => new ContactFieldDto
+                {
+                    Type = i.Type.ToString(),
+                    Value = i.Value
+                });
+        }
     }
 }
